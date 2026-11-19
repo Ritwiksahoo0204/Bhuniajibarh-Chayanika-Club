@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colours */
+  --color-cream: #fbf6ec;
+  --color-cream-deep: #f3ebda;
+
+  --color-sage-50: #f1f5ee;
+  --color-sage-100: #e1ead9;
+  --color-sage-300: #b5c9a8;
+  --color-sage-500: #7e9b6e;
+  --color-sage-700: #4f6b45;
+
+  --color-peach-100: #fde9dc;
+  --color-peach-200: #f9d5bf;
+  --color-peach-400: #f2b592;
+
+  --color-terracotta-500: #c8643f;
+  --color-terracotta-600: #b0522f;
+  --color-terracotta-700: #8f4125;
+
+  --color-forest-900: #1f3a2b;
+  --color-forest-700: #2f5240;
+
+  /* Shape */
+  --radius-card: 1.5rem;
+  --radius-chip: 999px;
+
+  /* Soft, green-tinted shadows */
+  --shadow-soft: 0 2px 8px rgb(31 58 43 / 0.06), 0 8px 24px rgb(31 58 43 / 0.06);
+  --shadow-lift: 0 4px 12px rgb(31 58 43 / 0.08), 0 16px 40px rgb(31 58 43 / 0.1);
 }
 
+/* Fonts: Latin first, Bengali glyphs fall through to the Bengali fonts */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-nunito), var(--font-hind), system-ui, sans-serif;
+  --font-display: var(--font-fraunces), var(--font-noto-serif-bengali), Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-forest-700);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-forest-900);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  /* Bengali text needs a little more line height */
+  :lang(bn) body { line-height: 1.85; }
+  :lang(bn) h1, :lang(bn) h2, :lang(bn) h3 { line-height: 1.35; letter-spacing: 0; }
+
+  :focus-visible {
+    outline: 3px solid var(--color-terracotta-500);
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Layout helpers */
+  .container-page { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+  .section { @apply py-16 md:py-24; }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+           font-semibold transition duration-200 ease-out
+           active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none;
+  }
+  .btn-primary   { @apply bg-terracotta-600 text-white shadow-soft hover:bg-terracotta-700 hover:shadow-lift; }
+  .btn-secondary { @apply border-2 border-sage-500 text-sage-700 hover:bg-sage-100; }
+  .btn-soft      { @apply bg-peach-100 text-terracotta-700 hover:bg-peach-200; }
+
+  /* Cards */
+  .card {
+    @apply rounded-card bg-white p-6 shadow-soft transition duration-200 ease-out;
+  }
+  .card-hover { @apply hover:-translate-y-1 hover:shadow-lift; }
+
+  /* Chips / badges */
+  .chip {
+    @apply inline-flex items-center rounded-full bg-sage-100 px-3 py-1
+           text-sm font-semibold text-sage-700;
+  }
+
+  /* Form fields */
+  .field {
+    @apply w-full rounded-2xl border-2 border-sage-300 bg-white px-4 py-3
+           text-forest-900 placeholder:text-forest-700/50 transition duration-200
+           focus:border-sage-500 focus:outline-none;
+  }
+  .field-error { @apply border-terracotta-600; }
+  .field-label { @apply mb-1.5 block text-sm font-semibold text-forest-900; }
+  .field-hint  { @apply mt-1.5 text-sm text-terracotta-700; }
 }
