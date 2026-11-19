@@ -15,3 +15,8 @@ export const formatDateTime = (iso: string, l: Locale) =>
     timeStyle: "short",
     timeZone: TZ,
   }).format(new Date(iso));
+
+export const formatDate = (iso: string, l: Locale) =>
+  new Intl.DateTimeFormat(intlLocale(l), { dateStyle: "medium", timeZone: TZ }).format(
+    new Date(iso),
+  );

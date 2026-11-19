@@ -45,5 +45,64 @@
     "heading": "Component preview",
     "body": "Temporary page to check the shared components.",
     "switch": "Read in Bengali"
+  },
+  "home": {
+  "hero": {
+    "eyebrow": "Bhuniajibarh, Ramnagar",
+    "title": "Together, we make memories.",
+    "body": "A warm corner of Purba Medinipur where neighbours become friends, festivals feel like family and everyone has a place.",
+    "primary": "Explore Our Club",
+    "secondary": "Explore Events"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "A home for our community",
+    "body": "[Placeholder] Write two or three warm sentences here about who the club is and why it exists.",
+    "togetherness": "Togetherness",
+    "culture": "Culture",
+    "service": "Service",
+    "learnMore": "Learn More"
+  },
+  "events": {
+    "eyebrow": "What's coming up",
+    "title": "Upcoming events",
+    "featured": "Featured event",
+    "seeAll": "See all events",
+    "emptyTitle": "No events right now",
+    "emptyBody": "New programmes are announced here first. Please check back soon.",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "started": "Happening now or just finished"
+  },
+  "activities": {
+    "eyebrow": "What we do",
+    "title": "Something for everyone",
+    "description": "From music and festivals to sports and service, there is always a way to take part."
+  },
+  "gallery": {
+    "eyebrow": "Memories",
+    "title": "Moments we love",
+    "description": "A few glimpses from our programmes and celebrations.",
+    "viewAll": "View full gallery",
+    "emptyTitle": "Photos are coming soon",
+    "emptyBody": "We are collecting pictures from our past programmes. Please visit again soon."
+  },
+  "news": {
+    "eyebrow": "News",
+    "title": "Latest announcements",
+    "journey": "Our journey",
+    "tags": { "notice": "Notice", "registration": "Registration", "news": "News" }
+  },
+  "join": {
+    "title": "Be part of our family",
+    "body": "Join us as a member, lend a hand as a volunteer or work with us on something new.",
+    "member": "Join as a member",
+    "volunteer": "Volunteer",
+    "collaborate": "Collaborate with us",
+    "primary": "Get involved",
+    "whatsapp": "Chat on WhatsApp"
   }
+}
+  
 }
