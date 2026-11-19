@@ -18,7 +18,10 @@ export const events: EventItem[] = [
     },
     startsAt: "2026-12-20T17:00:00+05:30",
     venue: {
-      name: { en: "Club ground, Bhuniajibarh", bn: "ক্লাব প্রাঙ্গণ, ভুনিয়াজিবার্হ" },
+      name: {
+        en: "Club ground, Bhuniajibarh",
+        bn: "ক্লাব প্রাঙ্গণ, ভূঁইয়াজীবার",
+      },
     },
     category: "cultural",
     image: null,
@@ -30,7 +33,10 @@ export const events: EventItem[] = [
   {
     id: "ev-2",
     slug: "sample-new-year-picnic",
-    title: { en: "[Sample] New Year Get-together", bn: "[নমুনা] নববর্ষের মিলনমেলা" },
+    title: {
+      en: "[Sample] New Year Get-together",
+      bn: "[নমুনা] নববর্ষের মিলনমেলা",
+    },
     shortDescription: {
       en: "A relaxed day out for members and families. Sample text.",
       bn: "সদস্য ও পরিবারের জন্য একটি আনন্দের দিন। নমুনা লেখা।",
@@ -40,7 +46,10 @@ export const events: EventItem[] = [
     venue: { name: { en: "To be announced", bn: "পরে জানানো হবে" } },
     category: "festival",
     image: null,
-    registration: { type: "rsvp", note: { en: "RSVP helps us plan.", bn: "আগে জানালে আয়োজনে সুবিধা হয়।" } },
+    registration: {
+      type: "rsvp",
+      note: { en: "RSVP helps us plan.", bn: "আগে জানালে আয়োজনে সুবিধা হয়।" },
+    },
     featured: false,
     status: "published",
     isPlaceholder: true,
@@ -66,14 +75,17 @@ export const events: EventItem[] = [
   {
     id: "ev-4",
     slug: "sample-community-service-day",
-    title: { en: "[Sample] Community Service Day", bn: "[নমুনা] সমাজসেবা দিবস" },
+    title: {
+      en: "[Sample] Community Service Day",
+      bn: "[নমুনা] সমাজসেবা দিবস",
+    },
     shortDescription: {
       en: "Volunteers working together for the village. Sample text.",
       bn: "গ্রামের জন্য স্বেচ্ছাসেবকদের একসাথে কাজ। নমুনা লেখা।",
     },
     description: { en: "Replace with real details.", bn: "আসল তথ্য লিখুন।" },
     startsAt: "2026-10-10T09:00:00+05:30", // past, to test the "Past events" list
-    venue: { name: { en: "Bhuniajibarh", bn: "ভুনিয়াজিবার্হ" } },
+    venue: { name: { en: "Bhuniajibarh", bn: "ভূঁইয়াজীবার" } },
     category: "service",
     image: null,
     registration: { type: "none" },

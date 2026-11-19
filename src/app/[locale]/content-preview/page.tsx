@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { Locale } from "@/types";
+import { Link } from "@/i18n/navigation";
 import { club, milestones } from "@/data/club";
 import { activities } from "@/data/activities";
 import {
@@ -11,12 +11,12 @@ import {
 } from "@/lib/content";
 
 export default async function ContentPreview({
-  searchParams,
+  params,
 }: {
-  searchParams: Promise<{ lang?: string }>;
+  params: Promise<{ locale: string }>;
 }) {
-  const { lang } = await searchParams;
-  const locale: Locale = lang === "bn" ? "bn" : "en";
+  const { locale: raw } = await params;
+  const locale: Locale = raw === "bn" ? "bn" : "en";
 
   const fmt = (iso: string) =>
     new Date(iso).toLocaleString(locale === "bn" ? "bn-IN" : "en-IN", {
@@ -34,8 +34,12 @@ export default async function ContentPreview({
     <main className="container-page section space-y-10">
       <div className="flex flex-wrap items-center gap-3">
         <span className="chip">Content preview (temporary)</span>
-        <Link className="btn btn-secondary" href="/content-preview?lang=en">English</Link>
-        <Link className="btn btn-secondary" href="/content-preview?lang=bn">বাংলা</Link>
+        <Link className="btn btn-secondary" href="/content-preview" locale="en">
+          English
+        </Link>
+        <Link className="btn btn-secondary" href="/content-preview" locale="bn">
+          বাংলা
+        </Link>
       </div>
 
       <section>
@@ -128,7 +132,9 @@ export default async function ContentPreview({
             </div>
           ))}
         </div>
-        <p className="mt-2 text-sm">A dash means no real figure yet. The real UI will hide these.</p>
+        <p className="mt-2 text-sm">
+          A dash means no real figure yet. The real UI will hide these.
+        </p>
       </section>
     </main>
   );
