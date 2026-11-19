@@ -3,9 +3,47 @@
     "title": "Bhuniajibarh Chayanika Club",
     "description": "A community club in Bhuniajibarh, Ramnagar, Purba Medinipur, West Bengal."
   },
+  "common": {
+    "skipToContent": "Skip to main content",
+    "joinUs": "Join Us",
+    "viewDetails": "View Details",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "backToTop": "Back to top",
+    "switchLanguage": "বাংলা",
+    "switchLanguageLabel": "Switch to Bengali",
+    "mainNavigation": "Main navigation"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "events": "Events",
+    "gallery": "Gallery",
+    "getInvolved": "Get Involved",
+    "contact": "Contact"
+  },
+  "footer": {
+    "quickLinks": "Quick links",
+    "contactUs": "Contact us",
+    "followUs": "Follow us",
+    "findUs": "Find us on Google Maps",
+    "contactSoon": "Contact details coming soon.",
+    "address": "Bhuniajibarh, Ramnagar, Purba Medinipur, West Bengal 721455",
+    "rights": "All rights reserved."
+  },
+  "events": {
+    "categories": {
+      "cultural": "Cultural",
+      "festival": "Festival",
+      "youth": "Youth",
+      "service": "Service",
+      "sports": "Sports",
+      "learning": "Learning"
+    }
+  },
   "test": {
-    "heading": "Routing works",
-    "body": "You are reading the English version of this page.",
+    "heading": "Component preview",
+    "body": "Temporary page to check the shared components.",
     "switch": "Read in Bengali"
   }
 }

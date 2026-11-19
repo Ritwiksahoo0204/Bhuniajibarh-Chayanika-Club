@@ -1,0 +1,17 @@
+import type { Locale } from "@/types";
+
+const TZ = "Asia/Kolkata";
+const intlLocale = (l: Locale) => (l === "bn" ? "bn-IN" : "en-IN");
+
+export const formatDay = (iso: string, l: Locale) =>
+  new Intl.DateTimeFormat(intlLocale(l), { day: "numeric", timeZone: TZ }).format(new Date(iso));
+
+export const formatMonth = (iso: string, l: Locale) =>
+  new Intl.DateTimeFormat(intlLocale(l), { month: "short", timeZone: TZ }).format(new Date(iso));
+
+export const formatDateTime = (iso: string, l: Locale) =>
+  new Intl.DateTimeFormat(intlLocale(l), {
+    dateStyle: "medium",
+    timeStyle: "short",
+    timeZone: TZ,
+  }).format(new Date(iso));

@@ -4,6 +4,11 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { fraunces, nunito, hindSiliguri, notoSerifBengali } from "@/styles/fonts";
+import { club } from "@/data/club";
+import { t as pick } from "@/lib/content";
+import type { Locale } from "@/types";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -31,13 +36,26 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
+  const l = locale as Locale;
+  const t = await getTranslations({ locale, namespace: "common" });
+
   return (
     <html
       lang={locale}
       className={`${fraunces.variable} ${nunito.variable} ${hindSiliguri.variable} ${notoSerifBengali.variable}`}
     >
-      <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      <body id="top">
+        <NextIntlClientProvider>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-white focus:px-5 focus:py-3 focus:font-semibold focus:shadow-lift"
+          >
+            {t("skipToContent")}
+          </a>
+          <Navbar name={pick(club.name, l)} shortName={pick(club.shortName, l)} />
+          <div id="main">{children}</div>
+          <Footer locale={l} />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
