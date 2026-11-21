@@ -8,6 +8,8 @@ import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { Announcements } from "@/components/home/Announcements";
 import { JoinCta } from "@/components/home/JoinCta";
 
+export const revalidate = 3600; // rebuild at most once an hour
+
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: raw } = await params;
   setRequestLocale(raw);

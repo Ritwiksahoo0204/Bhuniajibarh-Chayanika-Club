@@ -47,62 +47,114 @@
     "switch": "Read in Bengali"
   },
   "home": {
-  "hero": {
-    "eyebrow": "Bhuniajibarh, Ramnagar",
-    "title": "Together, we make memories.",
-    "body": "A warm corner of Purba Medinipur where neighbours become friends, festivals feel like family and everyone has a place.",
-    "primary": "Explore Our Club",
-    "secondary": "Explore Events"
+    "hero": {
+      "eyebrow": "Bhuniajibarh, Ramnagar",
+      "title": "Together, we make memories.",
+      "body": "A warm corner of Purba Medinipur where neighbours become friends, festivals feel like family and everyone has a place.",
+      "primary": "Explore Our Club",
+      "secondary": "Explore Events"
+    },
+    "about": {
+      "eyebrow": "About us",
+      "title": "A home for our community",
+      "body": "[Placeholder] Write two or three warm sentences here about who the club is and why it exists.",
+      "togetherness": "Togetherness",
+      "culture": "Culture",
+      "service": "Service",
+      "learnMore": "Learn More"
+    },
+    "events": {
+      "eyebrow": "What's coming up",
+      "title": "Upcoming events",
+      "featured": "Featured event",
+      "seeAll": "See all events",
+      "emptyTitle": "No events right now",
+      "emptyBody": "New programmes are announced here first. Please check back soon.",
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "started": "Happening now or just finished"
+    },
+    "activities": {
+      "eyebrow": "What we do",
+      "title": "Something for everyone",
+      "description": "From music and festivals to sports and service, there is always a way to take part."
+    },
+    "gallery": {
+      "eyebrow": "Memories",
+      "title": "Moments we love",
+      "description": "A few glimpses from our programmes and celebrations.",
+      "viewAll": "View full gallery",
+      "emptyTitle": "Photos are coming soon",
+      "emptyBody": "We are collecting pictures from our past programmes. Please visit again soon."
+    },
+    "news": {
+      "eyebrow": "News",
+      "title": "Latest announcements",
+      "journey": "Our journey",
+      "tags": { "notice": "Notice", "registration": "Registration", "news": "News" }
+    },
+    "join": {
+      "title": "Be part of our family",
+      "body": "Join us as a member, lend a hand as a volunteer or work with us on something new.",
+      "member": "Join as a member",
+      "volunteer": "Volunteer",
+      "collaborate": "Collaborate with us",
+      "primary": "Get involved",
+      "whatsapp": "Chat on WhatsApp"
+    }
   },
-  "about": {
-    "eyebrow": "About us",
-    "title": "A home for our community",
-    "body": "[Placeholder] Write two or three warm sentences here about who the club is and why it exists.",
-    "togetherness": "Togetherness",
-    "culture": "Culture",
-    "service": "Service",
-    "learnMore": "Learn More"
-  },
-  "events": {
-    "eyebrow": "What's coming up",
-    "title": "Upcoming events",
-    "featured": "Featured event",
-    "seeAll": "See all events",
-    "emptyTitle": "No events right now",
-    "emptyBody": "New programmes are announced here first. Please check back soon.",
-    "days": "days",
-    "hours": "hours",
-    "minutes": "minutes",
-    "started": "Happening now or just finished"
-  },
-  "activities": {
-    "eyebrow": "What we do",
-    "title": "Something for everyone",
-    "description": "From music and festivals to sports and service, there is always a way to take part."
-  },
-  "gallery": {
-    "eyebrow": "Memories",
-    "title": "Moments we love",
-    "description": "A few glimpses from our programmes and celebrations.",
-    "viewAll": "View full gallery",
-    "emptyTitle": "Photos are coming soon",
-    "emptyBody": "We are collecting pictures from our past programmes. Please visit again soon."
-  },
-  "news": {
-    "eyebrow": "News",
-    "title": "Latest announcements",
-    "journey": "Our journey",
-    "tags": { "notice": "Notice", "registration": "Registration", "news": "News" }
-  },
-  "join": {
-    "title": "Be part of our family",
-    "body": "Join us as a member, lend a hand as a volunteer or work with us on something new.",
-    "member": "Join as a member",
-    "volunteer": "Volunteer",
-    "collaborate": "Collaborate with us",
-    "primary": "Get involved",
-    "whatsapp": "Chat on WhatsApp"
+  "pages": {
+    "about": {
+      "title": "About Us",
+      "description": "Who we are, what we believe and why we gather.",
+      "storyTitle": "Our story",
+      "storyBody": "[Placeholder] Tell the story of how the club began, who started it and how it has grown. Add the founding year and a few key moments.",
+      "visionTitle": "Our vision",
+      "visionBody": "[Placeholder] Describe the future the club hopes to build for the community.",
+      "missionTitle": "Our mission",
+      "missionBody": "[Placeholder] Describe what the club does, day to day, to move towards that vision.",
+      "valuesTitle": "What we value",
+      "values": {
+        "togetherness": { "title": "Togetherness", "body": "Everyone has a place, whatever their age or background." },
+        "culture": { "title": "Culture", "body": "We celebrate and pass on the traditions we love." },
+        "service": { "title": "Service", "body": "We show up for our neighbours and our village." }
+      },
+      "whyTitle": "Why the club exists",
+      "whyBody": "[Placeholder] Explain in your own words why this club matters to the people of Bhuniajibarh.",
+      "teamTitle": "Our team",
+      "teamEmpty": "Our team will be introduced here soon.",
+      "groups": { "committee": "Committee", "advisor": "Advisors", "volunteer": "Volunteers" }
+    },
+    "events": {
+      "title": "Events & Programs",
+      "description": "Find out what is happening at the club, and look back at what we have enjoyed together.",
+      "filterLabel": "Filter by type",
+      "all": "All",
+      "upcoming": "Upcoming events",
+      "past": "Past events",
+      "noUpcoming": "No upcoming events of this type right now. Please check back soon.",
+      "noPast": "No past events of this type yet.",
+      "back": "All events",
+      "when": "When",
+      "where": "Where",
+      "about": "About this event",
+      "ended": "This event has ended",
+      "registration": "Registration",
+      "deadline": "Register by",
+      "rsvp": "Let us know you are coming",
+      "register": "Register now",
+      "share": "Share",
+      "copied": "Link copied"
+    },
+    "gallery": {
+      "title": "Gallery",
+      "description": "Photos from our events, programmes and celebrations.",
+      "emptyTitle": "Photos are coming soon",
+      "emptyBody": "We are collecting pictures from our past programmes. Please visit again soon.",
+      "photos": "photos",
+      "back": "All albums",
+      "albumEmpty": "This album has no photos yet."
+    }
   }
-}
-  
 }
