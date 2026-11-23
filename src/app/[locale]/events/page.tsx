@@ -89,18 +89,16 @@ export default async function EventsPage({
                         )}
                     </div>
 
-                    <div>
-                        <h2 className="text-3xl font-semibold">{t("past")}</h2>
-                        {past.length === 0 ? (
-                            <p className="card mt-6 bg-sage-100 text-center">{t("noPast")}</p>
-                        ) : (
+                    {past.length > 0 && (
+                        <div>
+                            <h2 className="text-3xl font-semibold">{t("past")}</h2>
                             <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                                 {past.map((e) => (
                                     <EventCard key={e.id} event={e} locale={locale} />
                                 ))}
                             </div>
-                        )}
-                    </div>
+                        </div>
+                    )}
                 </Container>
             </Section>
         </main>

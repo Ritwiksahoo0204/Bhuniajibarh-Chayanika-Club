@@ -18,6 +18,22 @@ export type EventCategory =
   | "sports"
   | "learning";
 
+export type SubEvent = {
+  id: string;
+  title: Localized;
+  time?: Localized;
+  venue?: Localized;
+  description?: Localized;
+  image?: ImageRef;
+};
+
+export type DaySchedule = {
+  dayNumber: number; // 1, 2, 3, 4, 5
+  date: string; // "10 Feb 2027"
+  title: Localized; // "দিন ১: ঘট স্থাপন ও ক্রীড়া প্রতিযোগিতা"
+  subEvents: SubEvent[];
+};
+
 export type EventItem = {
   id: string;
   slug: string; // used in the URL: /events/<slug>
@@ -38,6 +54,7 @@ export type EventItem = {
   featured: boolean;
   status: "published" | "draft";
   isPlaceholder?: boolean;
+  schedule?: DaySchedule[];
 };
 
 export type Photo = {

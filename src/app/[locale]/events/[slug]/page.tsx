@@ -14,6 +14,7 @@ import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
 import { Countdown } from "@/components/events/Countdown";
 import { ShareButton } from "@/components/events/ShareButton";
+import { EventDaysSchedule } from "@/components/events/EventDaysSchedule";
 import type { Locale } from "@/types";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -80,6 +81,22 @@ export default async function EventPage({ params }: Props) {
               <h1 className="mt-4 text-4xl font-semibold md:text-5xl">{pick(event.title, locale)}</h1>
               <h2 className="mt-8 text-2xl font-semibold">{t("about")}</h2>
               <p className="mt-3 text-lg whitespace-pre-line">{pick(event.description, locale)}</p>
+
+              {event.schedule && event.schedule.length > 0 && (
+                <div className="mt-12 space-y-6">
+                  <div className="border-t border-sage-200 pt-8">
+                    <h2 className="text-3xl font-semibold text-forest-900">
+                      {locale === "bn" ? "প্রতিদিনের অনুষ্ঠান সূচী ও পোস্টার" : "Daily Programme Schedule & Posters"}
+                    </h2>
+                    <p className="mt-2 text-forest-700">
+                      {locale === "bn" 
+                        ? "নিচের দিনগুলিতে ক্লিক করে সংশ্লিষ্ট দিনের বিস্তারিত কর্মসূচি ও পোস্টার দেখুন।" 
+                        : "Click on any day below to view that day's detailed programs and posters."}
+                    </p>
+                  </div>
+                  <EventDaysSchedule schedule={event.schedule} locale={locale} />
+                </div>
+              )}
             </div>
 
             <aside className="space-y-5">
