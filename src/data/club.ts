@@ -3,18 +3,18 @@ import type { ClubInfo, Milestone } from "@/types";
 export const club: ClubInfo = {
   name: {
     en: "Bhuniajibarh Chayanika Club",
-    bn: "ভূঁইয়াজীবার চয়নিকা ক্লাব", // TODO: confirm the official Bengali spelling
+    bn: "ভূঁঞ্যাজিবাড় চয়নিকা ক্লাব",
   },
   shortName: { en: "Chayanika Club", bn: "চয়নিকা ক্লাব" },
   tagline: {
-    en: "Together, we make memories.", // placeholder wording
-    bn: "একসাথে, গড়ি স্মৃতির মালা।", // TODO: review
+    en: "Together, we make memories.",
+    bn: "একসাথে, গড়ি স্মৃতির মালা।",
   },
   description: {
-    en: "A community club in Bhuniajibarh, Ramnagar, Purba Medinipur. [Placeholder: replace with the club's own two-line description.]",
-    bn: "পূর্ব মেদিনীপুরের রামনগরের ভূঁইয়াজীবারের একটি কমিউনিটি ক্লাব। [অস্থায়ী লেখা]",
+    en: "A community club in Bhuniajibarh, Ramnagar, Purba Medinipur, established in 1965.",
+    bn: "পূর্ব মেদিনীপুরের রামনগরের ভূঁঞ্যাজিবারের একটি ঐতিহ্যবাহী কমিউনিটি ক্লাব, স্থাপিত ১৯৬৫।",
   },
-  foundedYear: null,
+  foundedYear: 1965,
   address: {
     village: "Bhuniajibarh",
     block: "Ramnagar",
@@ -41,7 +41,7 @@ export const club: ClubInfo = {
 export const milestones: Milestone[] = [
   {
     id: "founded",
-    value: null,
+    value: 1965,
     label: { en: "Year founded", bn: "প্রতিষ্ঠার বছর" },
   },
   {

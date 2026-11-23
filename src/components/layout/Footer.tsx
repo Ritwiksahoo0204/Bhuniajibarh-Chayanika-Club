@@ -54,7 +54,7 @@ export async function Footer({ locale }: { locale: Locale }) {
           </ul>
         </div>
 
-        <div className="order-1 md:order-2">
+        <div className="order-1 md:order-2 min-w-0">
           <h2 className="text-lg font-semibold !text-cream">{t("footer.contactUs")}</h2>
           <ul className="mt-4 space-y-3 text-cream/80">
             <li className="flex gap-3">
@@ -73,9 +73,9 @@ export async function Footer({ locale }: { locale: Locale }) {
               </span>
             </li>
             {email && (
-              <li className="flex gap-3">
+              <li className="flex gap-3 min-w-0">
                 <Mail className="mt-1 h-5 w-5 shrink-0" aria-hidden />
-                <a href={`mailto:${email}`} className="hover:text-white hover:underline">
+                <a href={`mailto:${email}`} className="break-all hover:text-white hover:underline">
                   {email}
                 </a>
               </li>

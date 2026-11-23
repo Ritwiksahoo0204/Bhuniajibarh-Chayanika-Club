@@ -49,6 +49,7 @@ export async function Hero({ locale }: { locale: Locale }) {
               src="/photos/H1.png"
               alt="Club event"
               fill
+              sizes="(max-width: 768px) 100vw, 448px"
               className="object-cover"
               priority
             />

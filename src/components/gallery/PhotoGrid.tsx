@@ -19,7 +19,7 @@ export function PhotoGrid({ photos }: { photos: GridPhoto[] }) {
               type="button"
               onClick={() => setIndex(i)}
               aria-label={p.alt}
-              className="group block h-full w-full overflow-hidden rounded-3xl"
+              className="group relative block aspect-[4/3] md:aspect-auto h-full w-full overflow-hidden rounded-3xl bg-peach-100 shadow-soft"
             >
               <Image
                 src={p.src}
@@ -28,7 +28,7 @@ export function PhotoGrid({ photos }: { photos: GridPhoto[] }) {
                 height={p.height}
                 sizes="(min-width: 768px) 33vw, 50vw"
                 loading="lazy"
-                className="h-full w-full object-cover transition duration-200 group-hover:scale-105"
+                className="h-full w-full object-contain p-2 transition duration-200 group-hover:scale-105"
               />
             </button>
           </li>

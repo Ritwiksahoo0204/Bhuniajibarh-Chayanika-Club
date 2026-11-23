@@ -58,7 +58,7 @@ export default async function EventPage({ params }: Props) {
             {t("back")}
           </Link>
 
-          <div className="relative aspect-[16/9] max-h-96 w-full overflow-hidden rounded-3xl bg-gradient-to-br from-peach-100 to-sage-100">
+          <div className="relative aspect-[3/4] sm:aspect-[16/10] max-h-[520px] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-peach-100 to-sage-100 shadow-soft flex items-center justify-center p-2 sm:p-4">
             {event.image && (
               <Image
                 src={event.image.src}
@@ -66,7 +66,7 @@ export default async function EventPage({ params }: Props) {
                 fill
                 priority
                 sizes="(min-width: 1152px) 1152px, 100vw"
-                className="object-cover"
+                className="object-contain"
               />
             )}
           </div>

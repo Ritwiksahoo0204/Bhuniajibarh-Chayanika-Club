@@ -3,19 +3,15 @@ import type { Announcement } from "@/types";
 
 export const announcements: Announcement[] = [
   {
-    id: "an-1",
-    title: { en: "[Sample] Membership enquiries are open", bn: "[নমুনা] সদস্যপদের জন্য যোগাযোগ করুন" },
-    date: "2026-11-15",
-    tag: "registration",
+    id: "saraswati-puja-prep-2027",
+    title: {
+      en: "General Meeting & Preparations for Sri Sri Saraswati Puja 2027",
+      bn: "শ্রী শ্রী সরস্বতী পূজা ও বাণী বন্দনা ২০২৭-এর প্রস্তুতি ও পরিচালন কমিটির সাধারণ সভা",
+    },
+    date: "2026-11-20",
+    tag: "notice",
+    link: "/events/saraswati-puja-2027",
     pinned: true,
-    isPlaceholder: true,
-  },
-  {
-    id: "an-2",
-    title: { en: "[Sample] Winter programme dates announced", bn: "[নমুনা] শীতকালীন অনুষ্ঠানের তারিখ ঘোষণা" },
-    date: "2026-11-10",
-    tag: "news",
-    pinned: false,
-    isPlaceholder: true,
+    isPlaceholder: false,
   },
 ];

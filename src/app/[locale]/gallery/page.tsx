@@ -44,14 +44,14 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
               {sorted.map((a) => (
                 <li key={a.id}>
                   <Link href={`/gallery/${a.slug}`} className="card card-hover block h-full overflow-hidden !p-0">
-                    <div className="relative aspect-[4/3] bg-gradient-to-br from-peach-100 to-sage-100">
+                    <div className="relative aspect-[4/3] bg-gradient-to-br from-peach-100 to-sage-100 overflow-hidden">
                       {a.cover && (
                         <Image
                           src={a.cover.src}
                           alt={pick(a.cover.alt, locale)}
                           fill
                           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                          className="object-cover"
+                          className="object-contain p-2"
                         />
                       )}
                     </div>

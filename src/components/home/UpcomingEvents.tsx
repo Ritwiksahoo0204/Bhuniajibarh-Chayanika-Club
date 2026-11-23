@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { CalendarDays, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -36,8 +37,19 @@ export async function UpcomingEvents({ locale }: { locale: Locale }) {
           </div>
         ) : (
           <>
-            <article className="card grid gap-8 bg-peach-100 md:grid-cols-2 md:items-center md:p-10">
-              <div>
+            <article className="card grid gap-8 bg-peach-100 lg:grid-cols-12 lg:items-center lg:p-10">
+              {featured.image && (
+                <div className="relative mx-auto aspect-[3/4] w-full max-w-[260px] overflow-hidden rounded-2xl shadow-md lg:col-span-3">
+                  <Image
+                    src={featured.image.src}
+                    alt={pick(featured.image.alt, locale)}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 260px, 300px"
+                  />
+                </div>
+              )}
+              <div className={featured.image ? "lg:col-span-5" : "md:col-span-6"}>
                 <Badge tone="white">{t("featured")}</Badge>
                 <h3 className="mt-4 text-3xl font-semibold">{pick(featured.title, locale)}</h3>
                 <p className="mt-3 flex items-center gap-2">
@@ -53,16 +65,18 @@ export async function UpcomingEvents({ locale }: { locale: Locale }) {
                   {common("viewDetails")}
                 </ButtonLink>
               </div>
-              <Countdown
-                target={featured.startsAt}
-                locale={locale}
-                labels={{
-                  days: t("days"),
-                  hours: t("hours"),
-                  minutes: t("minutes"),
-                  started: t("started"),
-                }}
-              />
+              <div className={featured.image ? "lg:col-span-4" : "md:col-span-6"}>
+                <Countdown
+                  target={featured.startsAt}
+                  locale={locale}
+                  labels={{
+                    days: t("days"),
+                    hours: t("hours"),
+                    minutes: t("minutes"),
+                    started: t("started"),
+                  }}
+                />
+              </div>
             </article>
 
             {others.length > 0 && (

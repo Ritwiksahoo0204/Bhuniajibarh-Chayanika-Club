@@ -30,14 +30,14 @@ export async function EventCard({ event, locale }: { event: EventItem; locale: L
 
   return (
     <article className="card card-hover flex h-full flex-col overflow-hidden !p-0">
-      <div className="relative aspect-[4/3] bg-gradient-to-br from-peach-100 to-sage-100">
+      <div className="relative aspect-[4/3] bg-gradient-to-br from-peach-100 to-sage-100 overflow-hidden">
         {event.image ? (
           <Image
             src={event.image.src}
             alt={pick(event.image.alt, locale)}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="object-cover"
+            className="object-contain p-2"
           />
         ) : (
           <div className="flex h-full items-center justify-center" aria-hidden>
