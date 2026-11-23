@@ -14,17 +14,16 @@ export async function AboutPreview({ locale }: { locale: Locale }) {
   return (
     <Section tone="sage">
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-        <div className="relative mx-auto w-full max-w-md">
-          <div className="absolute -right-4 -bottom-4 h-full w-full rounded-3xl bg-peach-200" />
-          <div className="relative aspect-square overflow-hidden rounded-3xl bg-cream shadow-soft p-6">
-            <div className="relative h-full w-full">
-              <Image
-                src="/photos/ab.png"
-                alt="Chayanika Club Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
+        <div className="relative mx-auto flex w-full max-w-sm items-center justify-center">
+          <div className="relative aspect-square w-full max-w-[320px]">
+            <Image
+              src="/photos/ab.png"
+              alt="Chayanika Club"
+              fill
+              className="object-contain drop-shadow-md"
+              sizes="(max-width: 640px) 260px, 320px"
+              priority
+            />
           </div>
         </div>
         <div>
