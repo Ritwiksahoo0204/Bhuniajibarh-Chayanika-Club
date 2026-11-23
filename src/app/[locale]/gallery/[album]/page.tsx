@@ -8,19 +8,21 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { PhotoGrid } from "@/components/gallery/PhotoGrid";
-import { albums } from "@/data/albums";
+import { getAlbums, getAlbumBySlug } from "@/lib/gallery";
 import { t as pick } from "@/lib/content";
 import type { Locale } from "@/types";
 
 type Props = { params: Promise<{ locale: string; album: string }> };
 
+export const dynamic = "force-dynamic";
+
 export function generateStaticParams() {
-  return routing.locales.flatMap((locale) => albums.map((a) => ({ locale, album: a.slug })));
+  return routing.locales.flatMap((locale) => getAlbums().map((a) => ({ locale, album: a.slug })));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, album } = await params;
-  const found = albums.find((a) => a.slug === album);
+  const found = getAlbumBySlug(album);
   if (!found) return {};
   return {
     title: pick(found.title, locale as Locale),
@@ -32,7 +34,7 @@ export default async function AlbumPage({ params }: Props) {
   const { locale: raw, album } = await params;
   setRequestLocale(raw);
   const locale = raw as Locale;
-  const found = albums.find((a) => a.slug === album);
+  const found = getAlbumBySlug(album);
   if (!found) notFound();
   const t = await getTranslations({ locale, namespace: "pages.gallery" });
 

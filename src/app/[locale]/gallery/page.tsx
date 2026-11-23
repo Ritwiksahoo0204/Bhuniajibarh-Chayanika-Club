@@ -6,10 +6,12 @@ import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { PageHeader } from "@/components/ui/PageHeader";
-import { albums } from "@/data/albums";
+import { getAlbums } from "@/lib/gallery";
 import { t as pick } from "@/lib/content";
 import { formatDate } from "@/lib/format";
 import type { Locale } from "@/types";
+
+export const revalidate = 60; // Revalidate dynamic gallery additions every minute
 
 export async function generateMetadata({
   params,
@@ -26,7 +28,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
   setRequestLocale(raw);
   const locale = raw as Locale;
   const t = await getTranslations({ locale, namespace: "pages.gallery" });
-  const sorted = [...albums].sort((a, b) => +new Date(b.date) - +new Date(a.date));
+  const sorted = getAlbums();
 
   return (
     <main>

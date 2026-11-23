@@ -5,14 +5,14 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
 import { PhotoGrid, type GridPhoto } from "@/components/gallery/PhotoGrid";
-import { albums } from "@/data/albums";
+import { getAlbums } from "@/lib/gallery";
 import { t as pick } from "@/lib/content";
 import type { Locale } from "@/types";
 
 export async function GalleryPreview({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: "home.gallery" });
 
-  const photos: GridPhoto[] = albums
+  const photos: GridPhoto[] = getAlbums()
     .flatMap((a) => a.photos)
     .slice(0, 6)
     .map((p) => ({
