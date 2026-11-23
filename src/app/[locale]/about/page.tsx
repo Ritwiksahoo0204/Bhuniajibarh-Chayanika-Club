@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { User } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -88,9 +89,21 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                   <ul className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     {members.map((m) => (
                       <li key={m.id} className="card flex items-center gap-4">
-                        <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-peach-200">
-                          <User className="h-7 w-7 text-terracotta-700" aria-hidden />
-                        </span>
+                        {m.photo ? (
+                          <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full shadow-soft">
+                            <Image
+                              src={m.photo.src}
+                              alt={pick(m.photo.alt, locale)}
+                              fill
+                              className="object-cover"
+                              sizes="56px"
+                            />
+                          </div>
+                        ) : (
+                          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-peach-200">
+                            <User className="h-7 w-7 text-terracotta-700" aria-hidden />
+                          </span>
+                        )}
                         <div>
                           <p className="font-semibold text-forest-900">{pick(m.name, locale)}</p>
                           <p className="text-sm">{pick(m.role, locale)}</p>

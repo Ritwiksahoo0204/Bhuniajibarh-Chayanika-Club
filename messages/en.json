@@ -113,11 +113,11 @@
       "title": "About Us",
       "description": "Who we are, what we believe and why we gather.",
       "storyTitle": "Our story",
-      "storyBody": "[Placeholder] Tell the story of how the club began, who started it and how it has grown. Add the founding year and a few key moments.",
+      "storyBody": "Established in 1965 in the village of Bhuniajibarh, Ramnagar, Chayanika Club began as a humble initiative by local visionaries and youth to build a common ground for cultural celebration, sports, and mutual support. Over nearly six decades, guided by generation after generation of dedicated members, our club has grown into a cornerstone of community life in Purba Medinipur — keeping our traditions alive and standing united through every season.",
       "visionTitle": "Our vision",
-      "visionBody": "[Placeholder] Describe the future the club hopes to build for the community.",
+      "visionBody": "To build a united, self-reliant, and culturally vibrant Bhuniajibarh where every generation finds joy, brotherhood, and the opportunity to grow with dignity.",
       "missionTitle": "Our mission",
-      "missionBody": "[Placeholder] Describe what the club does, day to day, to move towards that vision.",
+      "missionBody": "Organizing year-round cultural festivals and sports tournaments, encouraging youth in constructive activities, and standing beside our neighbours through health camps, education support, and social welfare.",
       "valuesTitle": "What we value",
       "values": {
         "togetherness": {
@@ -134,7 +134,7 @@
         }
       },
       "whyTitle": "Why the club exists",
-      "whyBody": "[Placeholder] Explain in your own words why this club matters to the people of Bhuniajibarh.",
+      "whyBody": "In an era of rapid change, Chayanika Club exists to keep the soul of our village connected. We are here to ensure that every festival feels like family, that children and youth find constructive paths through sports, arts, and education, and that no family in our neighbourhood ever has to face difficulties alone.",
       "teamTitle": "Our team",
       "teamEmpty": "Our team will be introduced here soon.",
       "groups": {
