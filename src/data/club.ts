@@ -23,8 +23,16 @@ export const club: ClubInfo = {
     country: "India",
     postalCode: "721455",
   },
-  contact: { email: null, phone: null },
-  social: { facebook: null, instagram: null, youtube: null, whatsapp: null },
+  contact: {
+    email: "club.bhuniajibarhchayanika@gmail.com",
+    phone: "+91 XXXXXXXXXX"
+  },
+  social: {
+    facebook: "https://facebook.com/yourpage",
+    instagram: "https://instagram.com/yourpage",
+    youtube: null,
+    whatsapp: "https://wa.me/91XXXXXXXXXX",
+  },
   mapEmbedUrl: null,
   siteUrl: null,
 };

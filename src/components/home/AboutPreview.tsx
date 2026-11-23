@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { Flower2 } from "lucide-react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -14,10 +14,17 @@ export async function AboutPreview({ locale }: { locale: Locale }) {
   return (
     <Section tone="sage">
       <Container className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-        <div className="relative mx-auto w-full max-w-md" aria-hidden>
+        <div className="relative mx-auto w-full max-w-md">
           <div className="absolute -right-4 -bottom-4 h-full w-full rounded-3xl bg-peach-200" />
-          <div className="relative flex aspect-[4/3] items-center justify-center rounded-3xl bg-sage-300 shadow-soft">
-            <Flower2 className="h-20 w-20 text-sage-700" />
+          <div className="relative aspect-square overflow-hidden rounded-3xl bg-cream shadow-soft p-6">
+            <div className="relative h-full w-full">
+              <Image
+                src="/photos/ab.png"
+                alt="Chayanika Club Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
         <div>

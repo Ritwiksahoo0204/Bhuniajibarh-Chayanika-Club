@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Camera, Music, Users } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -17,7 +18,9 @@ export async function Hero({ locale }: { locale: Locale }) {
       <Container className="grid items-center gap-12 lg:grid-cols-2">
         <div>
           <Badge tone="peach">{t("eyebrow")}</Badge>
-          <h1 className="mt-5 text-4xl font-semibold sm:text-5xl lg:text-6xl">{t("title")}</h1>
+          <h1 className="mt-5 text-4xl font-semibold sm:text-5xl lg:text-6xl">
+            {t("title")}
+          </h1>
           <p className="mt-5 max-w-xl text-lg">{t("body")}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href="/about">{t("primary")}</ButtonLink>
@@ -30,7 +33,7 @@ export async function Hero({ locale }: { locale: Locale }) {
               {stats.map((m) => (
                 <div key={m.id}>
                   <dt className="text-sm">{pick(m.label, locale)}</dt>
-                  <dd className="font-display text-3xl font-semibold text-forest-900">
+                  <dd className="font-display text-forest-900 text-3xl font-semibold">
                     {m.value}
                     {m.suffix}
                   </dd>
@@ -40,16 +43,33 @@ export async function Hero({ locale }: { locale: Locale }) {
           )}
         </div>
 
-        {/* Placeholder collage, replaced by real photos later */}
-        <div className="relative mx-auto grid w-full max-w-md grid-cols-2 gap-4" aria-hidden>
-          <div className="col-span-2 flex aspect-[16/10] -rotate-2 items-center justify-center rounded-3xl bg-gradient-to-br from-peach-200 to-peach-100 shadow-soft">
-            <Users className="h-16 w-16 text-terracotta-600" />
+        <div className="relative mx-auto grid w-full max-w-md grid-cols-2 gap-4">
+          <div className="shadow-soft relative col-span-2 aspect-[16/10] -rotate-2 overflow-hidden rounded-3xl">
+            <Image
+              src="/photos/H1.png"
+              alt="Club event"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
-          <div className="flex aspect-square rotate-2 items-center justify-center rounded-3xl bg-sage-300 shadow-soft">
-            <Music className="h-12 w-12 text-sage-700" />
+          <div className="bg-sage-100 shadow-soft relative aspect-square min-w-0 rotate-2 overflow-hidden rounded-3xl">
+            <Image
+              src="/photos/H2.png"
+              alt="Cultural program"
+              fill
+              sizes="(min-width: 1024px) 224px, 50vw"
+              className="object-mid object-cover"
+            />
           </div>
-          <div className="flex aspect-square -rotate-1 items-center justify-center rounded-3xl bg-sage-100 shadow-soft">
-            <Camera className="h-12 w-12 text-sage-700" />
+          <div className="bg-sage-100 shadow-soft relative aspect-square min-w-0 -rotate-1 overflow-hidden rounded-3xl">
+            <Image
+              src="/photos/H3.png"
+              alt="Community gathering"
+              fill
+              sizes="(min-width: 1024px) 224px, 50vw"
+              className="object-m object-cover"
+            />
           </div>
         </div>
       </Container>
