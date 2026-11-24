@@ -25,13 +25,13 @@ export const club: ClubInfo = {
   },
   contact: {
     email: "club.bhuniajibarhchayanika@gmail.com",
-    phone: "+91 XXXXXXXXXX"
+    phone: null
   },
   social: {
-    facebook: "https://facebook.com/yourpage",
-    instagram: "https://instagram.com/yourpage",
-    youtube: null,
-    whatsapp: "https://wa.me/91XXXXXXXXXX",
+    facebook: "https://www.facebook.com/share/g/1ChvCJvWM4/?mibextid=NSMWBT",
+    instagram: "https://www.instagram.com/chayanika_club_1965?utm_source=ig_web_button_share_sheet&avpt=ZDNlZDc0MzIxNw==",
+    youtube: "https://www.youtube.com/@BHUNIAJIBARHCHAYANIKACLUB",
+    whatsapp: null,
   },
   mapEmbedUrl: null,
   siteUrl: null,
