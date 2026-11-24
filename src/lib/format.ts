@@ -1,7 +1,8 @@
 import type { Locale } from "@/types";
 
 const TZ = "Asia/Kolkata";
-const intlLocale = (l: Locale) => (l === "bn" ? "bn-IN" : "en-IN");
+// Use Latin numerals (1, 2, 3...) across both Bengali and English for 100% clarity
+const intlLocale = (l: Locale) => (l === "bn" ? "bn-IN-u-nu-latn" : "en-IN");
 
 export const formatDay = (iso: string, l: Locale) =>
   new Intl.DateTimeFormat(intlLocale(l), { day: "numeric", timeZone: TZ }).format(new Date(iso));

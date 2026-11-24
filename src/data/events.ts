@@ -14,7 +14,7 @@ export const events: EventItem[] = [
     },
     description: {
       en: "Organised with great devotion and celebration by Bhuniajibarh Chayanika Club (Estd. 1965). All devotees, neighbours, and community members are warmly invited to join the auspicious celebration and cultural programmes.\n\nDates: 10th February to 14th February, 2027.\nVenue: Kanupoydahat Birendranath Sasmal Prangan, Bhuniajibarh, Purba Medinipur.",
-      bn: "ভূঁঞ্যাজিবাড় চয়নিকা ক্লাব (স্থাপিত - ১৯৬৫)-এর পরিচালনায় আয়োজিত ঐতিহ্যবাহী সার্বজনীন শ্রী শ্রী সরস্বতী পূজা ও বাণী বন্দনা।\n\n১০ই ফেব্রুয়ারি থেকে ১৪ই ফেব্রুয়ারি, ২০২৭ পর্যন্ত ৫ দিনব্যাপী এই মহা উৎসবে সমস্ত ভক্তবৃন্দ, গ্রামবাসী ও শুভানুধ্যায়ীদের আন্তরিক আমন্ত্রণ জানাচ্ছি।\n\nস্থান: কানুপয়ডাহাট বীরেন্দ্রনাথ শাসমল প্রাঙ্গণ, ভূঁঞ্যাজিবাড়, পূর্ব মেদিনীপুর।",
+      bn: "ভূঁঞ্যাজিবাড় চয়নিকা ক্লাব (স্থাপিত - 1965)-এর পরিচালনায় আয়োজিত ঐতিহ্যবাহী সার্বজনীন শ্রী শ্রী সরস্বতী পূজা ও বাণী বন্দনা।\n\n10ই ফেব্রুয়ারি থেকে 14ই ফেব্রুয়ারি, 2027 পর্যন্ত 5 দিনব্যাপী এই মহা উৎসবে সমস্ত ভক্তবৃন্দ, গ্রামবাসী ও শুভানুধ্যায়ীদের আন্তরিক আমন্ত্রণ জানাচ্ছি।\n\nস্থান: কানুপয়ডাহাট বীরেন্দ্রনাথ শাসমল প্রাঙ্গণ, ভূঁঞ্যাজিবাড়, পূর্ব মেদিনীপুর।",
     },
     startsAt: "2027-02-10T08:00:00+05:30",
     endsAt: "2027-02-14T22:00:00+05:30",
@@ -48,7 +48,7 @@ export const events: EventItem[] = [
         date: "10 Feb 2027",
         title: {
           en: "Day 1: Ghat Sthapan, Inauguration & Sports Competitions",
-          bn: "দিন ১: ঘট স্থাপন, পূজা সূচনা ও ক্রীড়া প্রতিযোগিতা",
+          bn: "দিন 1: ঘট স্থাপন, পূজা সূচনা ও ক্রীড়া প্রতিযোগিতা",
         },
         subEvents: [
           {
@@ -59,7 +59,7 @@ export const events: EventItem[] = [
             },
             time: {
               en: "Night 09:00 PM onwards",
-              bn: "রাত্রি ৯:০০ ঘটিকা হইতে",
+              bn: "রাত্রি 9:00 ঘটিকা হইতে",
             },
             venue: {
               en: "Kanupoydahat Birendranath Sasmal Prangan",
@@ -87,7 +87,7 @@ export const events: EventItem[] = [
             },
             time: {
               en: "Afternoon 02:00 PM onwards",
-              bn: "দুপুর ২:০০ ঘটিকা হইতে",
+              bn: "দুপুর 2:00 ঘটিকা হইতে",
             },
             venue: {
               en: "Club Ground & Premises",
@@ -114,7 +114,7 @@ export const events: EventItem[] = [
         date: "11 Feb 2027",
         title: {
           en: "Day 2: Maha Puja, Pushpanjali & Quiz Competition",
-          bn: "দিন ২: মহাপূজা, পুষ্পাঞ্জলি ও সাধারণ জ্ঞান কুইজ প্রতিযোগিতা",
+          bn: "দিন 2: মহাপূজা, পুষ্পাঞ্জলি ও সাধারণ জ্ঞান কুইজ প্রতিযোগিতা",
         },
         subEvents: [
           {
@@ -125,7 +125,7 @@ export const events: EventItem[] = [
             },
             time: {
               en: "Morning 09:30 AM onwards",
-              bn: "সকাল ৯:৩০ ঘটিকা হইতে",
+              bn: "সকাল 9:30 ঘটিকা হইতে",
             },
             venue: {
               en: "Kanupoydahat Birendranath Sasmal Prangan",
@@ -153,7 +153,7 @@ export const events: EventItem[] = [
             },
             time: {
               en: "Evening 05:00 PM onwards",
-              bn: "সন্ধ্যা ৫:০০ ঘটিকা হইতে",
+              bn: "সন্ধ্যা 5:00 ঘটিকা হইতে",
             },
             venue: {
               en: "Club Cultural Stage",
@@ -180,7 +180,7 @@ export const events: EventItem[] = [
         date: "12 Feb 2027",
         title: {
           en: "Day 3: Sit & Draw Competition & Badminton Tournament",
-          bn: "দিন ৩: বসে আঁকো প্রতিযোগিতা ও জমজমাট ব্যাডমিন্টন টুর্নামেন্ট",
+          bn: "দিন 3: বসে আঁকো প্রতিযোগিতা ও জমজমাট ব্যাডমিন্টন টুর্নামেন্ট",
         },
         subEvents: [
           {
@@ -191,7 +191,7 @@ export const events: EventItem[] = [
             },
             time: {
               en: "Morning 10:00 AM onwards",
-              bn: "সকাল ১০:০০ ঘটিকা হইতে",
+              bn: "সকাল 10:00 ঘটিকা হইতে",
             },
             venue: {
               en: "Club Cultural Hall & Premises",
@@ -219,7 +219,7 @@ export const events: EventItem[] = [
             },
             time: {
               en: "Evening 05:30 PM onwards",
-              bn: "সন্ধ্যা ৫:৩০ ঘটিকা হইতে",
+              bn: "সন্ধ্যা 5:30 ঘটিকা হইতে",
             },
             venue: {
               en: "Club Floodlight Badminton Court",
@@ -246,7 +246,7 @@ export const events: EventItem[] = [
         date: "13 Feb 2027",
         title: {
           en: "Day 4: Exciting Games & Grand Immersion Procession",
-          bn: "দিন ৪: বিশেষ আনন্দ প্রতিযোগিতা ও শোভাযাত্রা সহকারে শুভ বিসর্জন",
+          bn: "দিন 4: বিশেষ আনন্দ প্রতিযোগিতা ও শোভাযাত্রা সহকারে শুভ বিসর্জন",
         },
         subEvents: [
           {
@@ -257,7 +257,7 @@ export const events: EventItem[] = [
             },
             time: {
               en: "Afternoon 02:30 PM onwards",
-              bn: "দুপুর ২:৩০ ঘটিকা হইতে",
+              bn: "দুপুর 2:30 ঘটিকা হইতে",
             },
             venue: {
               en: "Club Ground & Premises",
@@ -285,7 +285,7 @@ export const events: EventItem[] = [
             },
             time: {
               en: "Evening 05:00 PM onwards",
-              bn: "বিকাল ৫:০০ ঘটিকা হইতে",
+              bn: "বিকাল 5:00 ঘটিকা হইতে",
             },
             venue: {
               en: "Village Procession to Waterbody",
@@ -312,7 +312,7 @@ export const events: EventItem[] = [
         date: "14 Feb 2027",
         title: {
           en: "Day 5: Grand Community Feast & Annaprasad Distribution",
-          bn: "দিন ৫: সার্বজনীন অন্নপ্রসাদ বিতরণ ও সমাপনী মহোৎসব",
+          bn: "দিন 5: সার্বজনীন অন্নপ্রসাদ বিতরণ ও সমাপনী মহোৎসব",
         },
         subEvents: [
           {
@@ -323,7 +323,7 @@ export const events: EventItem[] = [
             },
             time: {
               en: "Midday 12:30 PM onwards",
-              bn: "দুপুর ১২:৩০ ঘটিকা হইতে",
+              bn: "দুপুর 12:30 ঘটিকা হইতে",
             },
             venue: {
               en: "Kanupoydahat Birendranath Sasmal Prangan",

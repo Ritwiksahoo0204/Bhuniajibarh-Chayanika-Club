@@ -23,7 +23,8 @@ export function Countdown({ target, locale, labels }: Props) {
   const diff = new Date(target).getTime() - now;
   if (diff <= 0) return <p className="font-semibold text-forest-900">{labels.started}</p>;
 
-  const num = new Intl.NumberFormat(locale === "bn" ? "bn-IN" : "en-IN");
+  // Use clean standard numerals (1, 2, 3...) for instant readability across all languages
+  const num = new Intl.NumberFormat("en-IN");
   const days = Math.floor(diff / 86_400_000);
   const hours = Math.floor((diff % 86_400_000) / 3_600_000);
   const minutes = Math.floor((diff % 3_600_000) / 60_000);
