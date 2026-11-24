@@ -1,8 +1,8 @@
-# Bhuniajibarh Chayanika Club (ভুনিয়াজিবর চয়নিকা ক্লাব)
+# Bhuniajibarh Chayanika Club (ভূঁঞ্যাজিবাড় চয়নিকা ক্লাব)
 
 > **স্থাপিত: ১৯৬৫ | Estd. 1965**  
 > *Where Every Neighbour is Family, Every Festival a Memory.*  
-> *ভুনিয়াজিবর, পূর্ব মেদিনীপুর, পশ্চিমবঙ্গ*
+> *ভূঁঞ্যাজিবাড়, পূর্ব মেদিনীপুর, পশ্চিমবঙ্গ*
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.4-black?logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.js.org/)
@@ -156,7 +156,7 @@ The easiest way to deploy this application is using [Vercel](https://vercel.com)
 
 ## 📬 Official Club Contact
 
-- **Name:** Bhuniajibarh Chayanika Club (ভুনিয়াজিবর চয়নিকা ক্লাব)
+- **Name:** Bhuniajibarh Chayanika Club (ভূঁঞ্যাজিবাড় চয়নিকা ক্লাব)
 - **Email:** [club.bhuniajibarhchayanika@gmail.com](mailto:club.bhuniajibarhchayanika@gmail.com)
 - **Location:** Bhuniajibarh, Purba Medinipur, West Bengal, India
 - **Facebook:** [Chayanika Club Facebook Group](https://www.facebook.com/share/g/1ChvCJvWM4/)

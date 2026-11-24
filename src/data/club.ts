@@ -12,7 +12,7 @@ export const club: ClubInfo = {
   },
   description: {
     en: "A community club in Bhuniajibarh, Ramnagar, Purba Medinipur, established in 1965.",
-    bn: "পূর্ব মেদিনীপুরের রামনগরের ভূঁঞ্যাজিবারের একটি ঐতিহ্যবাহী কমিউনিটি ক্লাব, স্থাপিত ১৯৬৫।",
+    bn: "পূর্ব মেদিনীপুরের রামনগরের ভূঁঞ্যাজিবাড়ের একটি ঐতিহ্যবাহী কমিউনিটি ক্লাব, স্থাপিত ১৯৬৫।",
   },
   foundedYear: 1965,
   address: {
