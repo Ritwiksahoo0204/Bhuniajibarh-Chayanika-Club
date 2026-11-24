@@ -31,7 +31,7 @@
   --shadow-lift: 0 4px 12px rgb(31 58 43 / 0.08), 0 16px 40px rgb(31 58 43 / 0.1);
 }
 
-/* Fonts: Latin first, Bengali glyphs fall through to the Bengali fonts */
+/* Fonts: Dual Language Pairing (Noto Serif Bengali + Fraunces, Hind Siliguri + Nunito) */
 @theme inline {
   --font-sans: var(--font-nunito), var(--font-hind), system-ui, sans-serif;
   --font-display: var(--font-fraunces), var(--font-noto-serif-bengali), Georgia, serif;
@@ -49,15 +49,50 @@
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     color: var(--color-forest-900);
     line-height: 1.15;
     letter-spacing: -0.01em;
   }
-  /* Bengali text needs a little more line height */
-  :lang(bn) body { line-height: 1.85; }
-  :lang(bn) h1, :lang(bn) h2, :lang(bn) h3 { line-height: 1.35; letter-spacing: 0; }
+
+  /* Dedicated Bengali Typography (Noto Serif Bengali for headings, Hind Siliguri for body) */
+  :lang(bn) body,
+  :lang(bn) p,
+  :lang(bn) span,
+  :lang(bn) a,
+  :lang(bn) button,
+  :lang(bn) input,
+  :lang(bn) textarea {
+    font-family: var(--font-hind), var(--font-nunito), system-ui, sans-serif;
+    line-height: 1.85;
+  }
+
+  :lang(bn) h1,
+  :lang(bn) h2,
+  :lang(bn) h3,
+  :lang(bn) h4,
+  :lang(bn) h5,
+  :lang(bn) h6,
+  :lang(bn) .font-display {
+    font-family: var(--font-noto-serif-bengali), var(--font-fraunces), Georgia, serif;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  /* Dedicated English Typography (Fraunces for headings, Nunito for body) */
+  :lang(en) body {
+    font-family: var(--font-nunito), var(--font-hind), system-ui, sans-serif;
+  }
+  :lang(en) h1,
+  :lang(en) h2,
+  :lang(en) h3,
+  :lang(en) h4,
+  :lang(en) h5,
+  :lang(en) h6,
+  :lang(en) .font-display {
+    font-family: var(--font-fraunces), var(--font-noto-serif-bengali), Georgia, serif;
+  }
 
   :focus-visible {
     outline: 3px solid var(--color-terracotta-500);

@@ -21,6 +21,7 @@ export const hindSiliguri = Hind_Siliguri({
 
 export const notoSerifBengali = Noto_Serif_Bengali({
   subsets: ["bengali"],
+  weight: ["400", "600", "700"],
   variable: "--font-noto-serif-bengali",
   display: "swap",
 });
