@@ -65,14 +65,14 @@ export function Navbar({ name, shortName }: { name: string; shortName: string })
           </span>
         </Link>
 
-        <nav aria-label={t("common.mainNavigation")} className="hidden items-center gap-1 lg:flex">
+        <nav aria-label={t("common.mainNavigation")} className="hidden items-center gap-1 xl:flex">
           {items.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               aria-current={item.active ? "page" : undefined}
               className={cn(
-                "rounded-full px-4 py-2 font-semibold transition duration-200 hover:bg-sage-100",
+                "whitespace-nowrap rounded-full px-3.5 py-2 text-[0.95rem] font-semibold transition duration-200 hover:bg-sage-100",
                 item.active ? "bg-sage-100 text-terracotta-700" : "text-forest-900",
               )}
             >
@@ -82,8 +82,8 @@ export function Navbar({ name, shortName }: { name: string; shortName: string })
         </nav>
 
         <div className="flex items-center gap-2">
-          <LanguageSwitcher className="hidden lg:inline-flex" />
-          <Link href="/get-involved" className="btn btn-primary hidden !py-2 lg:inline-flex">
+          <LanguageSwitcher className="hidden xl:inline-flex" />
+          <Link href="/get-involved" className="btn btn-primary hidden !py-2 !px-5 whitespace-nowrap xl:inline-flex">
             {t("common.joinUs")}
           </Link>
           <button
@@ -92,7 +92,7 @@ export function Navbar({ name, shortName }: { name: string; shortName: string })
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? t("common.closeMenu") : t("common.openMenu")}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-forest-900 hover:bg-sage-100 lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-forest-900 hover:bg-sage-100 xl:hidden"
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
